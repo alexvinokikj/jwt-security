@@ -20,7 +20,6 @@ import tl.alex.common.ApiErrors;
 public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
     public static final String X_AUTHORIZATION = "X-Authorization";
-    public static final String NOT_AUTHORIZED = "Access is denied";
     public static final String TOKEN_IS_NOT_VALID = "Token is not valid";
     public static final String HEADER_IS_NOT_VALID = "Header is not valid";
 

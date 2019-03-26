@@ -1,6 +1,4 @@
 package tl.alex.security;
-
-
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -46,16 +44,10 @@ public class JwtAuthenticationToken implements Authentication {
     }
 
     @Override
-    public JwtUser getPrincipal() {
-
-        return user;
-    }
+    public JwtUser getPrincipal() { return user; }
 
     @Override
-    public boolean isAuthenticated() {
-
-        return isAuthenticated;
-    }
+    public boolean isAuthenticated() { return isAuthenticated; }
 
     @Override
     public void setAuthenticated(boolean isAuthenticated) {

@@ -11,14 +11,13 @@ import tl.alex.common.ApiValues;
 import tl.alex.security.Permissions;
 
 @RestController
-@RequestMapping(ApiValues.ADMIN_ROUTE)
-public class AdminController {
+@RequestMapping(ApiValues.USER_ROUTE)
+public class UserController {
 
-    @Secured(Permissions.ADMIN)
-    @ApiOperation(value = "Get welcome message for admin", response = String.class)
+    @Secured(Permissions.USER)
+    @ApiOperation(value = "Get welcome message for regular user", response = String.class)
     @GetMapping
     public ResponseEntity<String> getWelcomeMessage(){
-        return new ResponseEntity<>("Hello for admin user.",HttpStatus.OK);
+        return new ResponseEntity<>("Say Hello, with user permission", HttpStatus.OK);
     }
-
 }
